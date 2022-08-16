@@ -1,19 +1,17 @@
-import React, { useContext } from "react";
 import { AuthContext } from "../../Context/AuthContext";
+import { useContext } from "react";
 import "./StartingPageContent.css";
 
 const StartingPageContent = () => {
   const { isLoggedIn } = useContext(AuthContext);
   return (
-    <div>
-      <section className="starting">
-        <h1>
-          {isLoggedIn
-            ? "Welcome User! You are now logged in"
-            : "Welcome! Please login to access the application"}
-        </h1>
-      </section>
-    </div>
+    <section className="starting">
+      <h1>
+        {isLoggedIn
+          ? "Welcome User ! You are now logged In"
+          : "Welcome ! Please login in to access the application"}{" "}
+      </h1>
+    </section>
   );
 };
 
